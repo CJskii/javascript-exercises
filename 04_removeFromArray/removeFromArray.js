@@ -9,11 +9,13 @@ const removeFromArray = function(arr, arg) {
 
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-const removeFromArray = function(arr, arg) {
-    let filtered = arr.filter
-    return arr.filtered;
-    
+const removeFromArray = function(arr, arg, value) {
+    const filter = arr.filter((arr) => arr !== arg && arr !== value)
+    return filter;    
 };
+
+
+//console.log(removeFromArray);
 
 // Do not edit below this line
 module.exports = removeFromArray;

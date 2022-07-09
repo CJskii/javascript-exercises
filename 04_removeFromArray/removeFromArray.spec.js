@@ -7,13 +7,13 @@ describe('removeFromArray', () => {
   test('removes multiple values', () => {
     expect(removeFromArray([1, 2, 3, 4], 3, 2)).toEqual([1, 4]);
   });
-  test.skip('ignores non present values', () => {
+  test('ignores non present values', () => {
     expect(removeFromArray([1, 2, 3, 4], 7, "tacos")).toEqual([1, 2, 3, 4]);
   });
-  test.skip('ignores non present values, but still works', () => {
+  test('ignores non present values, but still works', () => {
     expect(removeFromArray([1, 2, 3, 4], 7, 2)).toEqual([1, 3, 4]);
   });
-  test.skip('can remove all values', () => {
+  test('can remove all values', () => {
     expect(removeFromArray([1, 2, 3, 4], 1, 2, 3, 4)).toEqual([]);
   });
   test.skip('works with strings', () => {
