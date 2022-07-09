@@ -7,6 +7,15 @@ const removeFromArray = function(arr, arg) {
     }  
 }; */
 
+/*
+test('can remove all values', () => {
+    expect(removeFromArray([1, 2, 3, 4], 1, 2, 3, 4)).toEqual([]);
+  });
+
+
+
+*/
+
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const removeFromArray = function(arr, arg, value) {
@@ -14,16 +23,24 @@ const removeFromArray = function(arr, arg, value) {
     return filter;    
 };
 
+/*const removeFromArray = function(array, ...args) {
+
+    let args1 = Array.from(args);
+
+    for (i = 0; i < array.length; i++)
+        for (j = 0; j < args1.length; j++)
+
+    if (array[i] === args1[j]) {
+        array.splice(i, 1);
+        i--;
+        j--;
+    }
+    return array;
+}*/
 
 //console.log(removeFromArray);
 
 // Do not edit below this line
 module.exports = removeFromArray;
-// create function that takes [arr] and ...args
-// function looks at [arr] and filters for given ...args
-// ...args goes into different variable
-// function returns [arr] without filtered values(...args) 
 
-//filter arguments [3, 2] from [1, 2, 3, 4] and return [1, 4]
-
-console.log(removeFromArray([1, 2, 3, 4], 3, 2));  // should equal to [1, 4]
+console.log(removeFromArray([1, 2, 3, 4],1, 2, 3, 4));  // should equal to [1, 4]
