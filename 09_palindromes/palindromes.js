@@ -2,14 +2,17 @@ const palindromes = function (str) {
     let re = /[^A-Za-z0-9]/g; 
     let length = str.length;
     str = str.toLowerCase().replace(re, '')
-    for (i = 0; i <= length/2; i++)
-    if (str[i] !== str[length - 1 - i]){
+    str = str.replace(/[^\w\s\']|_/g, "")
+         .replace(/\s+/g, " ");
+    let strReverse = str.split("").reverse().join("")        
+    if (str == strReverse){
+        return true;
+    } else{
         return false;
     }
-    return true;
 };
 
-console.log(palindromes("sTRINg"));
+console.log(palindromes("racecar"));
 
 // Do not edit below this line
 module.exports = palindromes;
